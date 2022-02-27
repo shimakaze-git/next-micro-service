@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import type { NextPage } from 'next'
 import Link from 'next/link'
 
-import { signin, signup, signout } from '../logics/auth'
-import { firebaseClient } from '../pluguins/firebaseClient'
+import { signin, signup } from '../logics/auth'
+// import { firebaseClient } from '../pluguins/firebaseClient'
 
 // export default (_props: any) => {
 const Login: NextPage = (_props: any) => {
@@ -42,13 +42,6 @@ const Login: NextPage = (_props: any) => {
         }}
       >
         FireBase Log in
-      </button>
-      <button
-        onClick={async () => {
-          await signout()
-        }}
-      >
-        FireBase sign out
       </button>
 
       <hr />

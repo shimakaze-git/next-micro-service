@@ -1,13 +1,20 @@
+import nookies from 'nookies'
 import { setCookie, destroyCookie, parseCookies } from 'nookies'
 import type { NextPage, NextPageContext } from 'next'
 import { firebaseClient } from '../pluguins/firebaseClient'
+
+// cookieの取得
+export const getCookies = (ctx: object) => {
+  const cookies = nookies.get(ctx)
+  return cookies
+}
 
 // cookieの削除
 // ServerSide cookies
 export const destroyCookieToken = (ctx: NextPageContext, token: string) => {
   // console.log("token", token)
   destroyCookie(ctx, 'accessToken')
-}  
+}
 
 // cookieにtokenをsetする
 // ServerSide cookies
