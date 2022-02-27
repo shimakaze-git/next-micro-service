@@ -70,6 +70,20 @@ const Login: NextPage = (_props: any) => {
 
 // サーバーサイドレンダリング時に動作する関数
 export async function getServerSideProps(_props: any) {
+  // firebaseClient.auth().onAuthStateChanged((user) => {
+  //   if (!user) {
+  //     // サインインしていない状態
+  //     // サインイン画面に遷移する等
+  //     // 例:
+
+  //     console.log("no signin")
+  //   } else {
+
+  //     // サインイン済み
+  //     console.log("signined")
+  //   }
+  // })
+
   return {
     props: {}
   }
