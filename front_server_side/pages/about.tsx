@@ -1,20 +1,13 @@
 import { useRouter } from "next/router"
 import type { NextPage, NextPageContext, GetServerSideProps } from 'next'
 
-import { extractCookie } from './auth'
-// import styles from '../styles/Home.module.css'
-
-// export const getServerSideProps: GetServerSideProps = async (context) => {
-//   // ...
-//   console.log("getServerSideProps")
-//   return {}
-// }
+import { extractCookie } from '../logics/auth'
 
 const About: NextPage = (props) => {
-  console.log("props", props)
+  // console.log("props", props)
 
   const router = useRouter()
-  console.log("router.query", router.query)
+  // console.log("router.query", router.query)
 
   return (
     <div>
